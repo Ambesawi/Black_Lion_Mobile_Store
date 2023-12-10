@@ -2,7 +2,7 @@
 
 Welcome to the Black Lion Mobile Store repository! This project is a comprehensive e-commerce platform designed to provide users with a seamless and secure mobile device purchasing experience.
 
-## Team Members:
+## Team Members(groups):
 - Aman Brhane
 - Nebiha Dilsebo
 - Mekonen Feleke
