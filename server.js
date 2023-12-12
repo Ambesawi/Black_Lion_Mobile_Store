@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const path = require('path');
 const port = process.env.PORT || 3000;
 const { connectToDatabase, getClient } = require('./db');
 
@@ -9,9 +10,12 @@ app.use(express.static('public'));
 connectToDatabase();
 
 // Your routes and middleware for dynamic content go here
+// Serve static files from the 'public' directory
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/public/index.html');
+    // Send the HTML file when accessing the root URL
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.listen(port, () => {
@@ -30,3 +34,5 @@ app.get('/products', async (req, res) => {
         res.status(500).send('Internal Server Error');
     }
 });
+
+
