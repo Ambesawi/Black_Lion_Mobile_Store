@@ -1,0 +1,17 @@
+{
+  "name": "black_lion_mobile_store",
+  "version": "1.0.0",
+  "description": "Welcome to the Black Lion Mobile Store repository! This project is a comprehensive e-commerce platform designed to provide users with a seamless and secure mobile device purchasing experience.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongodb": "^6.3.0"
+  }
+}
