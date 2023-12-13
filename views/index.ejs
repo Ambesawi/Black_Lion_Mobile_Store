@@ -1,0 +1,24 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Lion Store</title>
+    <!-- Add any additional styles or links to external stylesheets here -->
+</head>
+<body>
+    <h1>Welcome to Black Lion Store</h1>
+    <ul id="product-list">
+        <% products.forEach(product => { %>
+            <li>
+                <strong>Product ID:</strong> <%= product.product_id %> |
+                <strong>Product Name:</strong> <%= product.product_name %>
+            </li>
+        <% }); %>
+    </ul>
+
+    <!-- Include your JavaScript file at the end of the body to ensure the DOM is fully loaded -->
+    <script src="app.js"></script>
+</body>
+</html>

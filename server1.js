@@ -1,16 +1,16 @@
-// server.js
 const express = require('express');
+const app = express();
 const path = require('path');
 const { connectToDatabase, getClient } = require('./db');
+const ejs = require('ejs');
 
-const app = express();
-const port = 3000;
-
-app.use(express.static(path.join(__dirname, '')));
-app.use('/css', express.static(path.join(__dirname, 'css')));
+app.set('view engine', 'ejs');
 
 // Connect to MongoDB
 connectToDatabase();
+
+// Serve static files from the 'public' directory
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', async (req, res) => {
     const db = getClient().db('Black_lion_store');
@@ -18,6 +18,7 @@ app.get('/', async (req, res) => {
 
     try {
         const products = await collection.find().toArray();
+        // Render the 'index' view and pass the products as a variable
         res.render('index', { products });
     } catch (error) {
         console.error('Error fetching products from MongoDB:', error);
@@ -25,6 +26,6 @@ app.get('/', async (req, res) => {
     }
 });
 
-app.listen(port, () => {
-    console.log(`Server is listening at http://localhost:${port}`);
+app.listen(3000, () => {
+    console.log('Server is running on port 3000');
 });
