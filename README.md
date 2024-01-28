@@ -2,6 +2,7 @@
 
 Welcome to the Black Lion Mobile Store repository! This project is a comprehensive e-commerce platform designed to provide users with a seamless and secure mobile device purchasing experience.
 
+
 ## Team Members(groups):
 - Aman Brhane
 - Nebiha Dilsebo
@@ -70,4 +71,3 @@ server.js: Handles server-side logic, routing, and communicates with MongoDB.
 app.js: Handles client-side logic, such as making requests to server endpoints (like /products), receiving data, and updating the HTML page dynamically.
 ## Conclusion:
 We are excited to embark on this project, and we look forward to overcoming challenges, acquiring new skills, and delivering a robust and user-friendly mobile store web application.
-
